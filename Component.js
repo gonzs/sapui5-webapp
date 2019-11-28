@@ -7,18 +7,13 @@ sap.ui.define([
 	
 	return UIComponent.extend("sapui5-webapp.Component", {
 		metadata:{
-			rootView:{
-				"viewName" : "sapui5-webapp.view.App",
-				"type" : "XML",
-				"async" : true,
-				"id" : "app"
-			}
+			manifest: "json"
 		},
 		init: function (){
 			UIComponent.prototype.init.apply(this,arguments);
 			var oData = {
 				recipient : {
-					name : "World"
+					name : "World?"
 				}
 			};
 			var oModel = new JSONModel(oData);
