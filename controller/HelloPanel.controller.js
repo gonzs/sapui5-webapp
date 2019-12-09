@@ -13,6 +13,7 @@ sap.ui.define([
          // show message
          MessageToast.show(sMsg);
       },
+      
       onOpenDialog: function () {
     	var oView = this.getView();
     	
@@ -21,7 +22,8 @@ sap.ui.define([
 				// load asynchronous XML fragment
 				Fragment.load({
 					id: oView.getId(),
-					name: "sap.ui.demo.walkthrough.view.HelloDialog"
+					name: "sapui5-webapp.view.HelloDialog",
+					controller: this
 				}).then(function (oDialog) {
 					// connect dialog to the root view of this component (models, lifecycle)
 					oView.addDependent(oDialog);
@@ -30,6 +32,10 @@ sap.ui.define([
 			} else {
 				this.byId("helloDialog").open();
 			}
+      },
+      
+      onCloseDialog: function (){
+      	this.byId("helloDialog").close();
       }
    });
 });
