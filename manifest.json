@@ -38,6 +38,13 @@
 		  "bundleName": "sapui5-webapp.i18n.i18n"
 		}
 	  }
+	},
+	"resources": {	
+		"css": [
+			{
+				"uri": "css/style.css"
+			}
+		]
 	}
-  }
+ }
 }
